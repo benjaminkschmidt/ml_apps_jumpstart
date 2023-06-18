@@ -23,7 +23,7 @@ app.add_middleware(
 )
 
 MODEL = tf.keras.models.load_model(
-    "C://Users//bensc//PycharmProjects//ml_apps_jumpstart//models//2//testing_model.h5")
+    "/computer_vision/models//2//testing_model.h5")
 
 CLASS_NAMES = ["Early Blight", "Late Blight", "Healthy"]
 

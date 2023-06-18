@@ -25,7 +25,7 @@ BATCH_SIZE = 32
 IMAGE_SIZE = 256
 CHANNELS=3
 EPOCHS=40
-data_directory_path="C://Users//bensc//PycharmProjects//ml_apps_jumpstart//data//PlantVillage"
+data_directory_path= "/data/PlantVillage"
 file_name="testing_model"
 dataset = tf.keras.preprocessing.image_dataset_from_directory(
     data_directory_path,
@@ -230,7 +230,7 @@ for images, labels in test_ds.take(1):
         plt.axis("off")
 
 import os
-model_version=max([int(i) for i in os.listdir("../models") + [0]])+1
+model_version= max([int(i) for i in os.listdir("../models") + [0]]) + 1
 model.save(f"../models/{model_version}")
 
 model.save(f"../models/{model_version}/{file_name}.h5")
